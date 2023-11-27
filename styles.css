@@ -1,0 +1,238 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: hsl(234, 29%, 20%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container-img {
+    margin-top: -1rem;
+}
+.container-img img {
+    width: 100%;
+}
+.container-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.container-inputHelp {
+    display: flex;
+    font-size: .75rem;
+    font-weight: 700;
+    margin-bottom: -.5rem;
+    justify-content: space-between;
+}
+.div-overlay {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+
+/* Container Img */
+#img-desktop {
+    display: none;
+}
+
+/* Container Sign Up */
+#page-title {
+    font-size: 2.25rem;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+li {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+#p-inputError {
+    display: none;
+    color: hsl(4, 100%, 67%);
+}
+#input-email {
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    border: 1px hsl(231, 7%, 60%) solid;
+    cursor: pointer;
+}
+
+#btn-subscribe {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: hsl(234, 29%, 20%);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Confirmation overlay */
+.div-confirm, .div-dismiss {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+}
+.div-confirm {
+    gap: 1.25rem;
+    margin-top: 8rem;
+}
+.div-dismiss {
+    margin-bottom: 2rem;
+}
+#img-success {
+    width: 15%;
+    margin-bottom: .5rem;
+}
+#p-confirmDesc {
+    line-height: 1.5rem;
+}
+#span-emailBold {
+    font-weight: 700;
+}
+#btn-dismiss {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: hsl(234, 29%, 20%);
+    border: 0;
+    border-radius: 6px;
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+    margin-top: 1rem;
+    color: white;
+}
+.attribution a { 
+    color: hsl(88, 61%, 62%); 
+}
+
+@media (min-height: 800px) {
+    .container-img {
+        margin-top: 0;
+    }
+    #page-title {
+        margin-top: .75rem;
+    }
+    #page-desc {
+        margin-bottom: .5rem;
+    }
+    ul {
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    #input-email {
+        margin-bottom: .5rem;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+@media (min-height: 875px) and (max-width: 1023px) {
+    .div-confirm {
+        margin-top: 12rem;
+    }
+    .div-dismiss {
+        margin-bottom: 6rem;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        background-color: hsl(235, 18%, 26%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    main {
+        display: grid;
+        grid-template-columns: .9fr .75fr;
+        background-color: #ffffff;
+        border-radius: 20px;
+        gap: 1.5rem;
+        padding: 1rem;
+        max-height: 500px;
+    }
+    main.confirmed {
+        gap: 0;
+        padding: 0;
+        max-height: 400px;
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-signup.confirmed {
+        display: none;
+    }
+    .container-signup {
+        order: -1;
+        justify-content: center;
+    }
+    .container-img {
+        max-height: 500px;
+        max-width: 400px;
+    }
+    #page-title {
+        margin-top: 0;
+        font-size: 3.5rem;
+    }
+    ul {
+        margin-bottom: 1.25rem;
+    }
+    #btn-subscribe:hover {
+        background-image: linear-gradient(to left, #ff673a, #ff527c);
+    }
+    #img-mobile {
+        display: none;
+    }
+    #img-desktop {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .div-overlay {
+        border-radius: 20px;
+        max-height: 450px;
+        width: 100%;
+        max-width: 425px;
+    }
+    .div-confirm, .div-dismiss {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+    .div-confirm {
+        margin-top: 2.5rem;
+    }
+    #h1-confirmTitle {
+        font-size: 2.5rem;
+    }
+    #btn-dismiss:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to left, #ff673a, #ff527c);
+    }
+}
